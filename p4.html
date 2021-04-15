@@ -1,0 +1,47 @@
+<html> 
+    <head> 
+        <script language="Javascript"> 
+            function vowel() 
+            { 
+                var str=frm.str.value; 
+                for(var i = 0; i<str.length; i++) 
+                { 
+                    if (str.charAt(i) =='a' || str.charAt(i) == 'e' || str.charAt(i) =='i' || str.charAt(i) == 'o' || str.charAt(i) == 'u' || str.charAt(i) == 'A' || str.charAt(i) == 'E' || str.charAt(i) =='I' || str.charAt(i) =='O' || str.charAt(i) == 'U') 
+                    { 
+                        document.write("The String entered is:" +str+ "<br/>"); 
+                        document.write("Leftmost vowel is :"+str.charAt(i)+"<br/>"); 
+                        var pos = i+1; document.write("Position of the leftmost vowel " +str.charAt(i)+ " is:" +pos+"\n"); 
+                        exit; 
+                    } 
+                } 
+                document.write("The String entered is:" +str+ "<br/>"); 
+                document.write("The string has no vowels"); 
+            } 
+            function reverse() 
+            { 
+                var num = frm1.numb.value; 
+                var n= num; var rev = 0, rem; 
+                while (n>0) 
+                { 
+                    rem = n % 10; 
+                    rev = rev * 10 + rem ; 
+                    n = Math.floor(n/10); 
+                } 
+                document.write("The number is : " +num+ " <br/> The reverse is : " +rev); 
+            } 
+        </script>
+    </head> 
+    <body> 
+        <h2>Finding vowel position</h2> <br> 
+        <form name="frm" onsubmit="vowel()"> 
+            <input type="text" name="str"> 
+            <input type="submit" name="submit"> 
+        </form> 
+        <br> 
+        <h2>Reverse of a number</h2> 
+        <form name="frm1" onsubmit="reverse()"> 
+            <input type="text" name="numb"> 
+            <input type="submit" name="submit"> 
+        </form> 
+    </body> 
+</html>
